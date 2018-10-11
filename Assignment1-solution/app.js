@@ -11,13 +11,14 @@ function LunchCheckController($scope) {
     
     var elem = document.getElementById('lunch-menu').value;
     var msg = document.getElementById('msg');
-    var elem1 = document.getElementById('lunch');
+    var input = document.getElementById('lunch');
 		
     if(elem == "" || elem.trim() == "")
     {
     	$scope.message = "Please enter data first";
 	    msg.style.color = "red";
-	    elem1.style.borderColor = "red";
+	    input.style.borderColor = "red";
+	    console.log(input);
     }
     else
     {
@@ -28,13 +29,13 @@ function LunchCheckController($scope) {
 		{
 			$scope.message = "Enjoy!";
 			msg.style.color = "green";
-			elem1.style.borderColor = "green";
+			input.style.borderColor = "green";
 		}
 		else
 		{
 			$scope.message = "Too much!";
 			msg.style.color = "green";
-			elem1.style.borderColor = "green";
+			input.style.borderColor = "green";
 		}
     }
   };
