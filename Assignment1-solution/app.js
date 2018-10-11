@@ -18,7 +18,7 @@ function LunchCheckController($scope) {
     	$scope.message = "Please enter data first";
 	    msg.style.color = "red";
 	    input.style.borderColor = "red";
-	    console.log("here");
+	    console.log(input);
     }
     else
     {
@@ -30,6 +30,7 @@ function LunchCheckController($scope) {
 			$scope.message = "Enjoy!";
 			msg.style.color = "green";
 			input.style.borderColor = "green";
+			console.log("here");
 		}
 		else
 		{
