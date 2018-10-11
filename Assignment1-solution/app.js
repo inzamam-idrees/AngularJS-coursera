@@ -10,32 +10,40 @@ function LunchCheckController($scope) {
 	$scope.sayMessage = function () {
     
     var elem = document.getElementById('lunch-menu').value;
-    var msg = document.getElementById('msg');
-    var input = document.getElementById('lunch');
-		
-    if(elem == "" || elem.trim() == "")
+	var msg = document.getElementById('msg');
+	var input = document.getElementById('lunch-menu');
+    
+	if(elem == "" || elem.trim() == "")
     {
-	document.getElementById('lunch').style.borderColor = "red";
     	$scope.message = "Please enter data first";
-	msg.style.color = "red";
-	    
+		msg.style.color = "red";
+		input.style.borderColor = "red";
+		// console.log(input);
     }
     else
     {
     	var words = elem.split(',');
-		// console.log(words);
-
+		
+		var value = "";
+		for ( var i = 0; i < words.length-1; i++)
+		{
+			if (words[i] === "" || words[i].trim() == "")
+			{
+				words = words.filter(item => item !== value);
+			}
+		}
+		
 		if (words.length <= 3)
 		{
-			document.getElementById('lunch').style.borderColor = "green";
 			$scope.message = "Enjoy!";
 			msg.style.color = "green";
+			input.style.borderColor = "green";
 		}
 		else
 		{
-			document.getElementById('lunch').style.borderColor = "green";
 			$scope.message = "Too much!";
 			msg.style.color = "green";
+			input.style.borderColor = "green";
 		}
     }
   };
