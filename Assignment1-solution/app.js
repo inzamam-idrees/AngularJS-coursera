@@ -10,9 +10,12 @@ function LunchCheckController($scope) {
 	$scope.sayMessage = function () {
     
     var elem = document.getElementById('lunch-menu').value;
+    var msg = document.getElementById('msg');
+		
     if(elem == "" || elem.trim() == "")
     {
     	$scope.message = "Please enter data first";
+	    msg.style.color = "red";
     }
     else
     {
@@ -22,10 +25,12 @@ function LunchCheckController($scope) {
 		if (words.length <= 3)
 		{
 			$scope.message = "Enjoy!";
+			msg.style.color = "green";
 		}
 		else
 		{
 			$scope.message = "Too much!";
+			msg.style.color = "green";
 		}
     }
   };
