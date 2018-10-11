@@ -11,7 +11,7 @@ function LunchCheckController($scope) {
     
     var elem = document.getElementById('lunch-menu').value;
     var msg = document.getElementById('msg');
-    var elem1 = document.getElementById('lunch-menu');
+    var elem1 = document.getElementById('lunch');
 		
     if(elem == "" || elem.trim() == "")
     {
