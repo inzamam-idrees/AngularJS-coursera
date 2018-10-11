@@ -18,7 +18,7 @@ function LunchCheckController($scope) {
     	$scope.message = "Please enter data first";
 	    msg.style.color = "red";
 	    input.style.borderColor = "red";
-	    console.log(input);
+	    console.log("here");
     }
     else
     {
